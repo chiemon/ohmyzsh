@@ -1,4 +1,8 @@
 
+## 克隆到本地
+
+git clone --recursive https://github.com/chiemon/ohmyzsh.git $HOME/.oh-my-zsh
+
 ## 版本要求
 
 | plugins                 | zsh                              |
@@ -9,20 +13,53 @@
 
 ## 配置文件
 
-```bash
-# ~/.zshrc
+1. 创建 .zshrc.d 目录
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+    ```bash
+    mkdir ~/.zshrc.d
+    ```
+
+2. 将原 .zshrc 位置文件移动到 .zshrc.d 目录下
+
+    ```bash
+    mv ~/.zshrc ~/.zshrc.d/default.zshrc
+    ```
+
+3. 创建新的 ~/.zshrc 文件
+
+    ```bash
+    touch ~/.zshrc
+    ```
+
+4. 修改配置文件：
+
+    - **~/.zshrc**
+
+        ```bash
+        if [ -d ~/.zshrc.d ]; then
+        for i in ~/.zshrc.d/*.zshrc; do
+            if [ -r $i ]; then
+            . $i
+            fi
+        done
+        unset i
+        fi 
+        ```
+
+    - **~/.zshrc.d/default.zshrc**
+
+        ```bash
+        ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
-plugins=(
-    git
-    zsh-proxy
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-    zsh-autocomplete
-)
-```
+        plugins=(
+            git
+            zsh-proxy
+            zsh-syntax-highlighting
+            zsh-autosuggestions
+            zsh-autocomplete
+        )
+        ```
 
 ## 插件
 
