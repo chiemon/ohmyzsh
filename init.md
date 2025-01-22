@@ -1,0 +1,33 @@
+
+## .zshrc
+
+```bash
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+
+plugins=(
+    git
+    zsh-proxy
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-autocomplete
+)
+```
+
+## powerlevel10k
+
+```bash
+p10k configure
+# Does this look like a diamond (rotated square)?     y        diamond(钻石)
+#
+# Does this look like a lock?                         n
+# Let's try another one. Does this look like a lock?  n
+# Prompt Style                                        4(Pure)
+# Prompt Colors                                       1(Original.)
+# Non-permanent content location                      2(Right)
+# Show current time?                                  2(24-hour format)
+# Prompt Height                                       2(Two lines)
+# Prompt Spacing                                      2(Sparse)
+# Enable Transient Prompt?                            n(No)
+# Instant Prompt Mode                                 1(Verbose)
+```
