@@ -1,7 +1,17 @@
 
-## .zshrc
+## 版本要求
+
+| plugins                 | zsh                              |
+| ----------------------- | -------------------------------- |
+| zsh-syntax-highlighting | ≥ 4.3.11                         |
+| zsh-autosuggestions     | ≥ 4.3.11                         |
+| zsh-autocomplete        | ≥ 5.8(tested) 、5.4(should work) |
+
+## 配置文件
 
 ```bash
+# ~/.zshrc
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
@@ -14,7 +24,9 @@ plugins=(
 )
 ```
 
-## powerlevel10k
+## 插件
+
+### powerlevel10k
 
 ```bash
 p10k configure
@@ -32,7 +44,7 @@ p10k configure
 # Instant Prompt Mode                                 1(Verbose)
 ```
 
-## zsh-proxy
+### zsh-proxy
 
 ```bash
 # 初始化
